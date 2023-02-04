@@ -11,11 +11,11 @@
 
 // Получаем число
 Console.Write("Введите трёхзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int number1 = Convert.ToInt32(Console.ReadLine());
 
 // Проверяем его на трёхзначность
 bool flag = false;
-int numberDiv = number;
+int numberDiv = number1;
 for (int i = 0; i < 3; i++)
 {
 	if(numberDiv == 0) {flag = true;}
@@ -28,8 +28,8 @@ if(flag){
 } else if( (numberDiv != 0) ){
 	Console.WriteLine("Число больше трёх знаков");
 } else {
-	int number2 = number / 10;
-	Console.WriteLine($"Вторая цифра этого числа: {number2 % 10}");
+	int numberTwo = number1 / 10;
+	Console.WriteLine($"Вторая цифра этого числа: {numberTwo % 10}");
 }
 //*** Проверка на трёхзначность громоздкое, можно ещё подумать
 
@@ -46,10 +46,10 @@ if(flag){
 
 // Получаем число
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
 
 // Переводим его в строку
-string numberStr = number.ToString();
+string? numberStr = number2.ToString();
 
 // Если длина этой строки больше или равна трём, выводим третью цифру
 if(numberStr.Length >= 3){
@@ -69,16 +69,17 @@ if(numberStr.Length >= 3){
 1 -> нет
 */
 
+
 // Бесконечный цикл позволяет ввести цифру только от 1 до 7
 // Выходим из цикла, когда получена корректная цифра
-int number = 0;
+int number3 = 0;
 while(true){
 	Console.Write("Введите номер дня (от 1 до 7): ");
-	number = Convert.ToInt32(Console.ReadLine());
-	if(number >= 1 && number <= 7){break;}
+	number3 = Convert.ToInt32(Console.ReadLine());
+	if(number3 >= 1 && number3 <= 7){break;}
 }
 
-if(number == 6 || number == 7){
+if(number3 == 6 || number3 == 7){
 	Console.WriteLine("Это выходной");
 } else {
 	Console.WriteLine("Это рабочий день");
