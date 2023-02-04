@@ -1,6 +1,7 @@
 bin/
 obj/
 
+*.csproj
 *.obj
 *.bin
 *.cache
