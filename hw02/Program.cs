@@ -8,6 +8,7 @@
 918 -> 1
 */
 
+/*
 // Получаем число
 Console.Write("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -30,8 +31,8 @@ if(flag){
 	int number2 = number / 10;
 	Console.WriteLine($"Вторая цифра этого числа: {number2 % 10}");
 }
-
 // Проверка на трёхзначность громоздкое, можно ещё подумать
+*/
 
 
 // Задание 2 **********************************************************************************
@@ -41,6 +42,24 @@ if(flag){
 78 -> третьей цифры нет
 32679 -> 6
 */
+
+// Получаем число
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+// Переводим его в строку
+string numberStr = number.ToString();
+
+// Если длина этой строки больше или равна трём, выводим третью цифру
+if(numberStr.Length >= 3){
+	Console.WriteLine(numberStr[2]);
+} else {
+	Console.WriteLine("Третьей цифры нет");
+}
+
+
+
+
 
 
 
