@@ -7,6 +7,8 @@
 *.o
 *.obj
 *.bin
+*.cache
+*.editorconfig
 
 # Precompiled Headers
 *.gch
