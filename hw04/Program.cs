@@ -7,7 +7,6 @@
 2, 4 -> 16
 */
 
-/*
 System.Console.WriteLine("Введите два числа");
 System.Console.Write("Основание степени: ");
 int numbA = int.Parse(System.Console.ReadLine());
@@ -31,7 +30,7 @@ int myPow(int par1, int par2){
 	return ret;
 }
 System.Console.WriteLine($"Результат: {myPow(numbA, numbB)}");
-*/
+
 
 
 
@@ -44,7 +43,7 @@ System.Console.WriteLine($"Результат: {myPow(numbA, numbB)}");
 */
 
 // Вводим число
-System.Console.Write("Введите число: ");
+System.Console.Write("Введите натуральное число: ");
 int number2 = int.Parse(System.Console.ReadLine());
 
 // Число должно быть натуральным
@@ -74,4 +73,31 @@ int mySum(int param1){
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 6, 1, 33 -> [6, 1, 33]
 */
+
+// Вводим число - размер массива
+System.Console.Write("Введите натуральное число: ");
+int number3 = int.Parse(System.Console.ReadLine());
+System.Console.WriteLine(String.Empty);
+
+// Число должно быть натуральным
+if(number3 < 1){
+	System.Console.WriteLine("Число меньше 1");
+} else {
+	System.Console.WriteLine($"Массив случайных чисел: {myRand(number3)}");
+}
+
+// Функция для заполнения массива случайными значениями
+string myRand(int par1){
+	int[] myArray = new int[par1];
+	string ret = String.Empty;
+
+	Random rnd = new Random();
+
+	for(int i = 0; i <= myArray.Length - 1; i++){
+		myArray[i] = rnd.Next(0, 100);
+		ret = ret + $"{myArray[i]} ";
+	}
+
+	return ret;
+}
 
