@@ -23,16 +23,6 @@ System.Console.WriteLine($"Количество положительных чи�
 
 /*** Функции ******************************************************************/
 
-// Функция печатает массив в консоль
-/*
-void PrintArray(int[] parArray){
-	foreach(int i in parArray){
-		System.Console.Write($"{i} ");
-	}
-	System.Console.WriteLine(String.Empty);
-}
-*/
-
 // Функция переводит строковые значения в числовые и записывает их в массив
 int[] StringToNumbers(string[] parStrArray){
 	int[] ret = new int[parStrArray.Length];
